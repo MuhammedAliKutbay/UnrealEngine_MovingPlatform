@@ -33,10 +33,8 @@ private:
 	float MoveDistance;	
 	UPROPERTY(EditAnywhere, Category="Rotating Platform")
 	FRotator RotationVelocity;
-
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
-
 	bool ShouldPlatformReturn() const;
 	float GetDistanceMoved() const;
 };

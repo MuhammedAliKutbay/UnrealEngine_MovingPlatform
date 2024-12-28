@@ -15,21 +15,15 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	//SetActorScale3D(MyActorScaleVector);
 	StartLocation = GetActorLocation();
-
-	
-
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 	MovePlatform(DeltaTime);
 	RotatePlatform(DeltaTime);
-	
 }	
 
 void AMovingPlatform::MovePlatform(float DeltaTime)
@@ -38,7 +32,6 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 	
 	if (ShouldPlatformReturn())
 	{
-		
 		FVector MoveDirection = PlatformVeloicty.GetSafeNormal();
 		StartLocation += MoveDirection * MoveDistance;
 		SetActorLocation(StartLocation);
